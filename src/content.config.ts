@@ -36,8 +36,12 @@ const blog = defineCollection({
     // whether to hide the hero image in the blog post
     hideHero: z.boolean().optional(),
 
+    // whether to hide the hero image in the blog post
+    noImage: z.boolean().optional(),
+
     // whether to use the hero image as the og image (instead of the default `/src/assets/background.png`)
     useHeroAsOGImage: z.boolean().optional(),
+    
     // wether to show title and short description in the og image
     noTextInOGImage: z.boolean().optional(),
   }),

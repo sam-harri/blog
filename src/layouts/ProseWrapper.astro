@@ -1,6 +1,8 @@
 ---
 import { colorBaseClasses, colorAccentClasses } from "src/colors";
 import { ACCENT_COLOR, BASE_COLOR } from "../config.json";
+
+const { class: className } = Astro.props;
 ---
 
 <div
@@ -9,6 +11,7 @@ import { ACCENT_COLOR, BASE_COLOR } from "../config.json";
     "prose-inline-code:bg-base-100 dark:prose-inline-code:bg-base-800 prose-inline-code:p-1 prose-inline-code:rounded-md",
     colorBaseClasses[BASE_COLOR],
     colorAccentClasses[ACCENT_COLOR],
+    className,
   ]}
 >
   <slot />

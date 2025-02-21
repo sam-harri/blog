@@ -24,6 +24,7 @@
     "astro": "^5.3.0",
     "astro-custom-embeds": "^0.0.1",
     "astro-og-canvas": "^0.7.0",
+    "cheerio": "^1.0.0",
     "lite-youtube-embed": "^0.3.3",
     "rehype-mathjax": "^7.1.0",
     "remark-math": "^6.0.0",

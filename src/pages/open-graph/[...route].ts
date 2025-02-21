@@ -64,6 +64,6 @@ export const { getStaticPaths, GET } = OGImageRoute({
       },
     },
     padding: 80,
-    fonts: ["./src/assets/InterVariable.ttf"],
+    fonts: ["./src/assets/fonts/InterVariable.ttf"],
   }),
 });

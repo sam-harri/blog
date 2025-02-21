@@ -18,6 +18,7 @@ import { transformerMetaHighlight, transformerNotationHighlight } from '@shikijs
 
 import LinkCardEmbed from './src/embeds/link-card/embed'
 import YoutubeEmbed from './src/embeds/youtube/embed'
+import ExcalidrawEmbed from "./src/embeds/excalidraw/embed";
 
 // https://astro.build/config
 export default defineConfig({
@@ -44,9 +45,9 @@ export default defineConfig({
 
   integrations: [customEmbeds({
     embeds: [
+      ExcalidrawEmbed,
       YoutubeEmbed,
       LinkCardEmbed,
-      
     ]
   }), mdx(), sitemap(), tailwind(), svelte()],
 
