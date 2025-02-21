@@ -23,12 +23,12 @@ const post = Astro.props;
 const { Content } = await post.render();
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif}"
+  "/src/assets/**/*.{jpeg,jpg,png,gif}"
 );
 const replacedHero = post.data.heroImage?.replace("../..", "/src");
 if (replacedHero && !images[replacedHero])
   throw new Error(
-    `"${post.data.heroImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+    `"${post.data.heroImage}" does not exist in glob: "src/assets/**/*.{jpeg,jpg,png,gif}"`
   );
 ---
 

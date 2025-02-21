@@ -68,7 +68,7 @@
   async function setupSearch() {
     try {
       // @ts-ignore
-      pagefind = await import(
+      pagefind = await import(/* @vite-ignore */
         BASE + "/pagefind/pagefind.js"
       );
     } catch (error) {

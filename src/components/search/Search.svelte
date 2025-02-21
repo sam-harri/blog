@@ -3,6 +3,7 @@
 </script>
 
 <button
+  class="search-button"
   onclick={() => {
     $showSearch = true;
   }}
@@ -23,3 +24,12 @@
     />
   </svg>
 </button>
+
+
+<noscript>
+  <style>
+    .search-button {
+      display: none;
+    }
+  </style>
+</noscript>

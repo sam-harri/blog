@@ -9,7 +9,7 @@ const { class: className, ...props } = Astro.props;
 
 <button
   class={cn(
-    "flex items-center justify-center text-base-950 hover:text-base-600 dark:text-base-50 dark:hover:text-base-400",
+    "theme-toggle flex items-center justify-center text-base-950 hover:text-base-600 dark:text-base-50 dark:hover:text-base-400",
     className
   )}
   data-theme-toggle
@@ -53,6 +53,14 @@ const { class: className, ...props } = Astro.props;
     ></path>
   </svg>
 </button>
+
+<noscript>
+  <style>
+    .theme-toggle {
+      display: none;
+    }
+  </style>
+</noscript>
 
 <script>
   (() => {
