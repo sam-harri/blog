@@ -30,12 +30,10 @@ export default defineConfig({
         $assets: resolve("./src/assets"),
         $content: resolve("./src/content"),
       },
-      conditions: ['browser'],
     },
     ssr: {
       noExternal: [BASE + "/pagefind/pagefind.js"],
     },
-    // @ts-ignore
     plugins: [pagefind()],
     build: {
       rollupOptions: {
