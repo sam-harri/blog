@@ -30,14 +30,14 @@ const { posts, totalPages, currentPage, tag, showFeatured } = Astro.props;
 
     {
       showFeatured ? (
-        <BigBlogEntry {...posts[0].data} slug={posts[0].slug} />
+        <BigBlogEntry {...posts[0].data} slug={posts[0].id} />
       ) : null
     }
     <div class="my-14 space-y-16 max-w-3xl">
       {
         posts.map((post: any, index: number) =>
           index > 0 || !showFeatured ? (
-            <BlogEntry {...post.data} slug={post.slug} />
+            <BlogEntry {...post.data} slug={post.id} />
           ) : null
         )
       }

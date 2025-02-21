@@ -9,7 +9,7 @@ const posts = await getBlogPosts();
 
 const pages = posts.reduce(
   (acc, post) => {
-    acc[post.slug] = {
+    acc[post.id] = {
       title: post.data.noTextInOGImage ? "" : post.data.title,
       description: post.data.noTextInOGImage
         ? ""

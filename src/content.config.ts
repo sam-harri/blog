@@ -1,9 +1,10 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from 'astro/loaders';
 
 const blog = defineCollection({
-  type: "content",
-  // Type-check frontmatter using a schema
-  schema: z.object({
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/blog/" }),
+ 	// Type-check frontmatter using a schema
+  	schema: z.object({
     // title of the blog post, don't repeat this in the markdown part
     title: z.string(),
 
@@ -43,7 +44,7 @@ const blog = defineCollection({
 });
 
 import { authorFeedLoader } from "@ascorbic/bluesky-loader";
-import { BLUESKY_IDENTIFIER } from "../config.json";
+import { BLUESKY_IDENTIFIER } from "./config.json";
 
 
 const posts = defineCollection({

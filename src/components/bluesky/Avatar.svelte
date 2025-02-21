@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '../../utils';
+	import { cn } from '../../style-utils';
 
 	type Props = {
 		link?: string;

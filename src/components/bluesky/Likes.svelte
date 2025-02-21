@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { atUriToPostUri, getUserPosts, getLikes, getPost } from "./utils";
-  import { cn } from "src/utils";
+  import { cn } from "src/style-utils";
 
   const { uri, likesCount, likesData, user, url } = $props();
 
