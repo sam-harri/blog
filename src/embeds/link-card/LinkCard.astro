@@ -1,5 +1,4 @@
 ---
-import { cn } from "../../style-utils";
 import { parseOpenGraph } from "./lib";
 import type { HTMLAttributes } from "astro/types";
 
@@ -43,10 +42,10 @@ const domain = meta?.url ? new URL(meta.url).hostname.replace("www.", "") : "";
 ---
 
 <article
-  class={cn(
-    "group max-w-lg my-6 relative isolate flex flex-col justify-end overflow-hidden not-prose aspect-[1200/630] rounded-xl border border-base-300 dark:border-base-700 bg-base-200/50 dark:bg-base-950/50 p-4",
-    className
-  )}
+  class:list={[
+    "group max-w-lg my-6 relative isolate flex flex-col justify-end overflow-hidden not-prose aspect-[1200/630] rounded-xl border border-base-400 dark:border-base-700 bg-base-200/50 dark:bg-base-950/50 p-4",
+    className,
+  ]}
   {...Astro.props}
 >
   {

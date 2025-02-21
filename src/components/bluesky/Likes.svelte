@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { atUriToPostUri, getUserPosts, getLikes, getPost } from "./utils";
-  import { cn } from "src/style-utils";
+  import { getUserPosts, getLikes, getPost } from "./utils";
 
   const { uri, likesCount, likesData, user, url } = $props();
 
@@ -47,10 +46,10 @@
       {#each postLikesData as user, index}
         <a
           href={`https://bsky.app/profile/${user.actor.handle}`}
-          class={cn(
+          class={[
             "relative inline-block size-12 rounded-full overflow-hidden ring-2 ring-base-50 dark:ring-base-900  bg-base-950",
             index === 0 ? "-ml-2" : ""
-          )}
+          ]}
           target="_blank"
         >
           <img

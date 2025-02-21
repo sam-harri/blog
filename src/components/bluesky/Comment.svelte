@@ -4,7 +4,6 @@
     renderPostAsHtml,
     numberToHumanReadable,
   } from "./utils";
-  import { cn } from "src/style-utils";
   import Comment from "./Comment.svelte";
   import Avatar from "./Avatar.svelte";
   import RelativeTime from "./relative-time";

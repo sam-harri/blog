@@ -1,5 +1,4 @@
 ---
-import { cn } from "../style-utils";
 import type { HTMLAttributes } from "astro/types";
 
 export type Props = HTMLAttributes<"button">;
@@ -8,10 +7,10 @@ const { class: className, ...props } = Astro.props;
 ---
 
 <button
-  class={cn(
+  class:list={[
     "theme-toggle flex items-center justify-center text-base-950 hover:text-base-600 dark:text-base-50 dark:hover:text-base-400",
-    className
-  )}
+    className,
+  ]}
   data-theme-toggle
   {...props}
 >

@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { cn } from '../../style-utils';
-
 	type Props = {
 		link?: string;
 		size?: string;
@@ -14,11 +12,11 @@
 
 {#snippet avatar()}
 	<div
-		class={cn(
+		class={[
 			'overflow-hidden rounded-full border border-base-400/50 bg-base-100 dark:border-base-700 dark:bg-base-800',
 			size,
 			className
-		)}
+		]}
 	>
 		{#if src}
 			<img loading="lazy" class="h-full w-full object-cover" {src} {alt} />

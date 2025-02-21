@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import { resolve } from "path";
+import remarkMath from "remark-math"
+import rehypeMathjax from "rehype-mathjax"
 
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -62,6 +64,13 @@ export default defineConfig({
       transformers: [transformerMetaHighlight(), transformerNotationHighlight()],
       wrap: true
     },
+
+    remarkPlugins: [
+      remarkMath
+    ],
+    rehypePlugins: [
+      rehypeMathjax
+    ]
   },
 
   prefetch: {
