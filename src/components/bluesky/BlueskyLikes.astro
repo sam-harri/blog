@@ -18,8 +18,8 @@ const { disableComments, disableLikes } = Astro.props;
 const post = posts
   .sort(
     (a, b) =>
-      new Date(b.data.indexedAt).getTime() -
-      new Date(a.data.indexedAt).getTime()
+      new Date(a.data.indexedAt).getTime() -
+      new Date(b.data.indexedAt).getTime()
   )
   // @ts-expect-error: weird type fuckery
   .find((post) => post.data.embed?.external?.uri === url);
