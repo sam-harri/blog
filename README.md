@@ -1,4 +1,4 @@
-<img width="1246" alt="blog-template" src="https://github.com/user-attachments/assets/98603992-139b-4e25-a6b5-6ab9af5523fb" />
+[<img width="1234" alt="new-blog" src="https://github.com/user-attachments/assets/4afbcff2-64a9-4808-81b9-96be4f10eeec" />](https://flo-bit.dev/blog-template/)
 
 # astro blog template
 
