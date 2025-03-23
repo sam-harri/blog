@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { BASE } from "../../config.json";
+  import { BASE } from "../../config.ts";
 
   import { fade, slide } from "svelte/transition";
   import type { Pagefind } from "vite-plugin-pagefind/types";

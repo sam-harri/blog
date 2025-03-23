@@ -1,5 +1,5 @@
 ---
-import { BASE, NAME, SOCIAL_LINKS } from "../config.json";
+import { BASE, LICENSE, NAME, SOCIAL_LINKS } from "../config.ts";
 
 const today = new Date();
 ---
@@ -231,10 +231,10 @@ const today = new Date();
       }
     </div>
     <p
-      class="mt-8 text-center text-sm/6 text-base-600 dark:text-base-400 md:order-1 md:mt-0"
+      class="mt-8 text-center text-sm/6 text-base-600 dark:text-base-400 md:order-1 md:mt-0 text-pretty"
     >
       &copy; {today.getFullYear()}
-      {NAME}. All rights reserved.
+      {NAME}. {LICENSE}
     </p>
   </div>
 </footer>

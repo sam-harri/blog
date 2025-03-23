@@ -1,10 +1,9 @@
 ---
-import { BLUESKY_IDENTIFIER } from "../../config.json";
+import { BLUESKY_IDENTIFIER, SITE } from "../../config.ts";
 import { getCollection } from "astro:content";
 import { atUriToPostUri, getComments, getLikes } from "./utils";
 import Likes from "./Likes.svelte";
 import Comments from "./Comments.svelte";
-import { SITE } from "../../config.json";
 
 let posts = await getCollection("posts");
 

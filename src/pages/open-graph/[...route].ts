@@ -1,5 +1,5 @@
 import { OGImageRoute } from "astro-og-canvas";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../../config.json";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../config.ts";
 import { getBlogPosts } from "src/utils";
 
 const posts = await getBlogPosts();
@@ -47,7 +47,9 @@ export const { getStaticPaths, GET } = OGImageRoute({
     title: page.title,
     description: page.description,
     bgImage: {
-      path: page.useHero ? "." + page.heroImage : "./src/assets/backgrounds/background.png",
+      path: page.useHero
+        ? "." + page.heroImage
+        : "./src/assets/backgrounds/background.png",
       fit: "cover",
     },
     font: {

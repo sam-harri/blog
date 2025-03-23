@@ -25,3 +25,24 @@ export const colorAccentClasses: Record<string, string> = {
   pink: "prose-pink",
   rose: "prose-rose",
 };
+
+export type AccentColor =
+  | "red"
+  | "orange"
+  | "amber"
+  | "yellow"
+  | "lime"
+  | "green"
+  | "emerald"
+  | "teal"
+  | "cyan"
+  | "sky"
+  | "blue"
+  | "indigo"
+  | "violet"
+  | "purple"
+  | "fuchsia"
+  | "pink"
+  | "rose";
+
+export type BaseColor = "slate" | "stone" | "gray" | "neutral" | "zinc";

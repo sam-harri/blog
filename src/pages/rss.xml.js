@@ -1,5 +1,5 @@
 import rss from "@astrojs/rss";
-import { SITE_TITLE, SITE_DESCRIPTION, BASE } from "../config.json";
+import { SITE_TITLE, SITE_DESCRIPTION, BASE } from "../config.ts";
 import { getBlogPosts } from "src/utils";
 
 export async function GET(context) {

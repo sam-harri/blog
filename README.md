@@ -36,9 +36,9 @@ the demo blog doubles as a tutorial on how to use this template:
 
 1. Fork this repository by clicking on "Use template" (note: this repository per default uses github actions which are only free for public repositories).
 
-2. In your repository settings, set up github pages to deploy using github actions (*SETTINGS* -> *PAGES* -> *SOURCE*: **Github Actions**)
+2. In your repository settings, set up github pages to deploy using github actions (_SETTINGS_ -> _PAGES_ -> _SOURCE_: **Github Actions**)
 
-3. Set up your blog info in `src/config.json` (most importantly change `SITE` to your deployment url, e.g. for github pages `https://<your-github-username>.github.io/` and `BASE` to your base path, e.g. for github pages `/<your-repo-name>`)
+3. Set up your blog info in `src/config.ts` (most importantly change `SITE` to your deployment url, e.g. for github pages `https://<your-github-username>.github.io/` and `BASE` to your base path, e.g. for github pages `/<your-repo-name>`)
 
 4. Your blog should be live in about 1 minute at `https://<your-github-username>.github.io/<your-repo-name>`
 

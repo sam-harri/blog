@@ -9,7 +9,7 @@ import FormattedDate from "$components/FormattedDate.astro";
 import { getBlogPosts } from "src/utils";
 import BlueskyLikes from "$components/bluesky/BlueskyLikes.astro";
 import Tag from "$components/Tag.astro";
-import { SHOW_IMAGES } from "../../config.json";
+import { SHOW_IMAGES } from "../../config.ts";
 
 export async function getStaticPaths() {
   const posts = await getBlogPosts();

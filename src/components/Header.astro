@@ -5,7 +5,9 @@ import {
   SEARCH_ENABLED,
   SITE_FAVICON,
   SITE_NAME,
-} from "../config.json";
+  SITE_TITLE,
+  SHOW_FAVICON_IN_HEADER,
+} from "../config.ts";
 import ThemeToggle from "./ThemeToggle.astro";
 import HeaderLink from "./HeaderLink.astro";
 import CodeCopyButton from "./CodeCopyButton.astro";
@@ -26,10 +28,10 @@ const { active } = Astro.props;
         <span class="sr-only">go to home</span>
 
         <div class="text-3xl flex items-center gap-x-2">
-          {SITE_FAVICON}
+          {SHOW_FAVICON_IN_HEADER ? SITE_FAVICON : null}
           <span
             class="hidden md:block font-bold text-base text-base-950 dark:text-base-50"
-            >{SITE_NAME}</span
+            >{SITE_NAME || SITE_TITLE}</span
           >
         </div>
       </a>
