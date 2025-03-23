@@ -47,9 +47,13 @@ if (replacedHero && !images[replacedHero])
       ) : null
     }
     <BlogPost>
-      <div class="flex mt-8 items-center gap-x-4 text-xs">
-        <FormattedDate date={post.data.pubDate} />
-        <div class="flex gap-x-2">
+      <div
+        class="flex mt-8 gap-4 text-xs flex-col md:flex-row items-start md:items-center"
+      >
+        <div class="shrink-0">
+          <FormattedDate date={post.data.pubDate} />
+        </div>
+        <div class="flex gap-2 flex-wrap">
           {post.data.tags?.map((tag: string) => <Tag {tag} />)}
         </div>
       </div>

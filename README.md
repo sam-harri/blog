@@ -46,7 +46,6 @@ the demo blog doubles as a tutorial on how to use this template:
 
 6. Add your info in `src/content/info/`:
 
-- `description.md` is used for the homepage description
 - `about.md` is used for the about page
 
 ## Notes
