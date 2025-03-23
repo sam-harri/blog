@@ -6,23 +6,46 @@ published: true
 tags: ["code", "markdown"]
 ---
 
+## Inline code
+
+````mdx
+Write inline code like this: `inline code`
+````
+
+### Example
+
 this is some `inline code`
 
-this is some multiline code:
+## Multiline code
 
-```js {1,2}
+Use three backticks to start and end a code block, 
+optionally specify the language after the first set of backticks for syntax highlighting.
+
+````mdx
+```js
 const a = 1;
-
-console.log(a);
-
 const b = "this is a string";
 
-console.log(b); // [!code highlight]
+console.log(b);
+```
+````
 
-function test() {
-  const test =
-    "this is a very long string, that should hopefully wrap onto multiple lines"; // [!code highlight]
+### Example
 
-  console.log(test);
-}
+```js
+const a = 1;
+const b = "this is a string";
+
+console.log(b);
+```
+
+## Code highlighting
+
+Add `// [!code highlight]` at the end of a line to highlight it
+
+### Example
+
+```js
+const hello = "Hello world!";
+console.log(hello); // [!code highlight]
 ```

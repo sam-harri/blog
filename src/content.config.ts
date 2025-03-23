@@ -6,19 +6,31 @@ const blog = defineCollection({
   // Type-check frontmatter using a schema
   schema: z.object({
     // title of the blog post, don't repeat this in the markdown part
+    // REQUIRED
     title: z.string(),
 
     // will be shown in the blog post list
+    // REQUIRED
     description: z.string(),
 
-    disableComments: z.boolean().optional(),
-
-    disableLikes: z.boolean().optional(),
-
     // date published
+    // REQUIRED
     pubDate: z.coerce.date(),
 
-    published: z.boolean(),
+    // whether the post is published
+    // defaults to true
+    // if set to false the post will not be shown in the blog list nor be accessible by url
+    published: z.boolean().optional(),
+
+    // whether to hide the post from the blog list (can still be accessed by url)
+    // useful for sharing drafts with other people
+    hidden: z.boolean().optional(),
+
+    // whether to disable bluesky comments
+    disableComments: z.boolean().optional(),
+
+    // whether to disable bluesky likes
+    disableLikes: z.boolean().optional(),
 
     // short description will be used for og image (fallback to description)
     shortDescription: z.string().optional(),
@@ -39,11 +51,9 @@ const blog = defineCollection({
     // whether to hide the hero image in the blog post
     noImage: z.boolean().optional(),
 
-    // whether to use the hero image as the og image (instead of the default `/src/assets/background.png`)
-    useHeroAsOGImage: z.boolean().optional(),
-
-    // wether to show title and short description in the og image
-    noTextInOGImage: z.boolean().optional(),
+    // replace the default og image with a custom one, will also not show the title and description in the og image (add it yourself)
+    // has to be in /src/assets folder and has to start with `/src/assets/`
+    customOGImage: z.string().optional(),
   }),
 });
 

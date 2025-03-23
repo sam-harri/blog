@@ -1,7 +1,7 @@
 {
   "name": "blog-template",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.3.0",
     "@astrojs/svelte": "^7.0.7",
     "@astrojs/tailwind": "^6.0.1",
-    "@shikijs/transformers": "^1.24.2",
+    "@shikijs/transformers": "^3.2.1",
     "@tailwindcss/forms": "^0.5.9",
     "astro": "^5.5.4",
     "astro-custom-embeds": "^0.0.1",

@@ -32,6 +32,22 @@ description: "This is my first blog post"
 pubDate: "Oct 24 2024"
 ```
 
+### published (optional)
+
+- whether the post is published, default: true, if set to false the post will not be shown in the blog list nor be accessible by url
+
+```yml
+published: true
+```
+
+### hidden (optional)
+
+- whether the post is hidden, default: false, if set to true the post will not be shown in the blog list but will still be accessible by url
+
+```yml
+hidden: false
+```
+
 ### short description (optional)
 
 - will be used for open-graph image generation (will fallback to description)
@@ -72,21 +88,15 @@ tags: ["first", "blog"]
 hideHero: false
 ```
 
-### use hero as open-graph image (optional)
+### custom open-graph image (optional)
 
-- whether to use the hero image as the open-graph image (instead of the default `/src/assets/background.png`), default: false
-
-```yml
-useHeroAsOGImage: false
-```
-
-### no text in open-graph image (optional)
-
-- wether to hide title and short description in the open-graph image, default: false
+- path to a custom open-graph image, will also hide title and description in the open-graph image, 
+image _has to be_ in /src/assets folder and _has to start_ with `/src/assets/`
 
 ```yml
-noTextInOGImage: false
+customOGImage: "/src/assets/backgrounds/blog-placeholder-4.jpg"
 ```
+
 
 ### disable comments (optional)
 

@@ -1,5 +1,5 @@
 ---
-import { BASE, LICENSE, NAME, SOCIAL_LINKS } from "../config.ts";
+import { BASE, LICENSE, NAME, SOCIAL_LINKS, SOURCE_LINK } from "../config.ts";
 
 const today = new Date();
 ---
@@ -235,6 +235,17 @@ const today = new Date();
     >
       &copy; {today.getFullYear()}
       {NAME}. {LICENSE}
+      {
+        SOURCE_LINK ? (
+          <a
+            href={SOURCE_LINK}
+            target="_blank"
+            class="text-accent-600 hover:text-accent-500 dark:text-accent-500 dark:hover:text-accent-400 font-medium"
+          >
+            Source
+          </a>
+        ) : null
+      }
     </p>
   </div>
 </footer>
