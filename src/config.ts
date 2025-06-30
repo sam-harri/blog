@@ -33,10 +33,10 @@ export const BLUESKY_IDENTIFIER = "flo-bit.dev";
 export const SOURCE_LINK = 'https://github.com/flo-bit/blog-template';
 
 // will be used to set the base color of the blog
-export const BASE_COLOR: BaseColor = "stone";
+export const BASE_COLOR: BaseColor = "neutral";
 
 // will be used to set the accent color of the blog
-export const ACCENT_COLOR: AccentColor = "pink";
+export const ACCENT_COLOR: AccentColor = "cyan";
 
 // will show all icons that are not empty in the footer as links
 export const SOCIAL_LINKS: {
