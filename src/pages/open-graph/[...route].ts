@@ -1,7 +1,6 @@
 import { OGImageRoute } from "astro-og-canvas";
-import { ACCENT_COLOR, BASE_COLOR, SITE_DESCRIPTION, SITE_TITLE } from "../../config.ts";
-import { getBlogPosts } from "src/utils";
-import colors from "tailwindcss/colors";
+import { ACCENT_COLOR, BASE_COLOR, SITE_DESCRIPTION, SITE_TITLE } from "../../config";
+import { getBlogPosts } from "../../utils";
 
 const posts = await getBlogPosts();
 
@@ -33,8 +32,34 @@ function hexToRgb(hex: string): [number, number, number] {
   ];
 }
 
-const accentColor = colors[ACCENT_COLOR];
-const baseColor = colors[BASE_COLOR];
+// Define color palettes for hex values
+const accentColor = {
+  50: '#f1f8f5',
+  100: '#e6f2ed',
+  200: '#d1e8e0',
+  300: '#b3d8c9',
+  400: '#8cc4b0',
+  500: '#66b393',
+  600: '#4da681',
+  700: '#33996f',
+  800: '#1a8c5d',
+  900: '#1a8c5d',
+  950: '#0b3d2e',
+};
+
+const baseColor = {
+  50: '#f1f8f5',
+  100: '#e6f2ed',
+  200: '#d1e8e0',
+  300: '#b3d8c9',
+  400: '#8cc4b0',
+  500: '#66b393',
+  600: '#4da681',
+  700: '#33996f',
+  800: '#1a8c5d',
+  900: '#1a8c5d',
+  950: '#0b3d2e',
+};
 
 export const { getStaticPaths, GET } = OGImageRoute({
   // Tell us the name of your dynamic route segment.

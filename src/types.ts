@@ -1,4 +1,4 @@
-export type BaseColors = "gray" | "neutral" | "stone" | "zinc" | "slate";
+export type BaseColors = "gray" | "neutral" | "stone" | "zinc" | "slate" | "custom";
 
 export type AccentColors =
   | "red"

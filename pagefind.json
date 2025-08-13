@@ -1,4 +1,4 @@
 {
-  "site": "dist",
+  "site": "build",
   "vite_plugin_pagefind": {}
 }

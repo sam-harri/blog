@@ -2,16 +2,24 @@ import prose from "@tailwindcss/typography";
 import forms from "@tailwindcss/forms";
 import plugin from "tailwindcss/plugin";
 import colors from "tailwindcss/colors";
-import { ACCENT_COLOR, BASE_COLOR, MANUAL_DARK_MODE } from "./src/config.ts";
+import { ACCENT_COLOR, BASE_COLOR, MANUAL_DARK_MODE } from "./src/config";
+import { customColors } from "./src/colors";
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+      },
       colors: {
-        accent: colors[ACCENT_COLOR.toLowerCase()],
-        base: colors[BASE_COLOR.toLowerCase()],
+        // Custom color palette that adapts to light/dark mode
+        accent: customColors.light,
+        base: customColors.light,
+        // Dark mode variants
+        'accent-dark': customColors.dark,
+        'base-dark': customColors.dark,
       },
       typography: {
         DEFAULT: {

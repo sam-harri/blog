@@ -1,12 +1,12 @@
 ---
-import { BASE, LICENSE, NAME, SOCIAL_LINKS, SOURCE_LINK } from "../config.ts";
+import { SITE, BASE, LICENSE, NAME, SOCIAL_LINKS, SOURCE_LINK } from "../config";
 
 const today = new Date();
 ---
 
 <footer class="">
   <div
-    class="mx-auto max-w-7xl px-6 pt-12 mt-12 pb-12 md:flex md:items-center md:justify-between lg:px-16 border-t border-base-200 dark:border-base-800"
+    class="mx-auto max-w-7xl px-6 pt-12 mt-12 pb-12 md:flex md:items-center md:justify-between lg:px-16 border-t border-[var(--fg)]/20"
   >
     <div class="flex justify-center items-center gap-x-6 md:order-2">
       {
@@ -14,7 +14,7 @@ const today = new Date();
           <a
             target="_blank"
             href={SOCIAL_LINKS.FACEBOOK_URL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">Facebook</span>
             <svg
@@ -37,7 +37,7 @@ const today = new Date();
           <a
             target="_blank"
             href={SOCIAL_LINKS.BLUESKY_URL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">Bluesky</span>
 
@@ -59,7 +59,7 @@ const today = new Date();
           <a
             target="_blank"
             href={SOCIAL_LINKS.INSTAGRAM_URL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">Instagram</span>
             <svg
@@ -82,7 +82,7 @@ const today = new Date();
           <a
             target="_blank"
             href={SOCIAL_LINKS.TWITTER_URL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">X</span>
             <svg
@@ -100,7 +100,7 @@ const today = new Date();
           <a
             target="_blank"
             href={SOCIAL_LINKS.LINKEDIN_URL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">LinkedIn</span>
             <svg
@@ -119,7 +119,7 @@ const today = new Date();
           <a
             target="_blank"
             href={SOCIAL_LINKS.SUBSTACK_URL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">Substack</span>
             <svg
@@ -143,7 +143,7 @@ const today = new Date();
           <a
             target="_blank"
             href={SOCIAL_LINKS.GITHUB_URL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">GitHub</span>
 
@@ -167,7 +167,7 @@ const today = new Date();
           <a
             target="_blank"
             href={SOCIAL_LINKS.YOUTUBE_URL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">YouTube</span>
             <svg
@@ -190,7 +190,7 @@ const today = new Date();
           <a
             target="_blank"
             href={"mailto:" + SOCIAL_LINKS.EMAIL}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">{SOCIAL_LINKS.EMAIL}</span>
             <svg
@@ -209,8 +209,8 @@ const today = new Date();
         SOCIAL_LINKS.SHOW_RSS ? (
           <a
             target="_blank"
-            href={BASE + "/rss.xml"}
-            class="text-base-600 hover:text-base-800 dark:text-base-400 dark:hover:text-base-200"
+            href={SITE + BASE + "rss.xml"}
+            class="text-[var(--fg)]/70 hover:text-[var(--fg)]"
           >
             <span class="sr-only">RSS feed</span>
 
@@ -231,7 +231,7 @@ const today = new Date();
       }
     </div>
     <p
-      class="mt-8 text-center text-sm/6 text-base-600 dark:text-base-400 md:order-1 md:mt-0 text-pretty"
+      class="mt-8 text-center text-sm/6 text-[var(--fg)]/70 md:order-1 md:mt-0 text-pretty"
     >
       &copy; {today.getFullYear()}
       {NAME}. {LICENSE}
@@ -240,7 +240,7 @@ const today = new Date();
           <a
             href={SOURCE_LINK}
             target="_blank"
-            class="text-accent-600 hover:text-accent-500 dark:text-accent-500 dark:hover:text-accent-400 font-medium"
+            class="text-[var(--fg)] hover:text-[var(--fg)]/80 font-medium"
           >
             Source
           </a>

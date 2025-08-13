@@ -25,6 +25,20 @@ const { title, description, image } = Astro.props;
     </script>
 
     <style is:global>
+      :root {
+        --bg: #f1f8f5;
+        --fg: #0b3d2e;
+        --fg-rgb: 11 61 46;
+        --bg-rgb: 241 248 245;
+      }
+      
+      html.dark {
+        --bg: #0b3d2e;
+        --fg: #f1f8f5;
+        --fg-rgb: 241 248 245;
+        --bg-rgb: 11 61 46;
+      }
+      
       html.dark .astro-code,
       html.dark .astro-code span {
         color: var(--shiki-dark);
@@ -37,7 +51,9 @@ const { title, description, image } = Astro.props;
 
       pre {
         @apply overflow-hidden !important;
-        @apply border border-base-300 dark:border-base-700 bg-base-200/50 dark:bg-base-950/30 rounded-xl !important;
+        border: 1px solid rgb(var(--fg-rgb) / 0.2) !important;
+        background-color: rgb(var(--bg-rgb) / 0.5) !important;
+        @apply rounded-xl !important;
       }
 
       .line.highlighted {
@@ -49,19 +65,21 @@ const { title, description, image } = Astro.props;
         width: calc(100% + 48px);
       }
       .line.highlighted {
-        @apply bg-accent-500/10 dark:bg-accent-700/10;
+        background-color: rgb(var(--fg-rgb) / 0.1);
       }
 
       ::selection {
-        @apply bg-accent-300/50 dark:bg-accent-900/40;
+        background-color: rgb(var(--fg-rgb) / 0.2);
       }
 
       lite-youtube {
-        @apply rounded-xl border border-base-300 dark:border-base-700;
+        @apply rounded-xl;
+        border: 1px solid rgb(var(--fg-rgb) / 0.2);
       }
 
       .prose mark {
-        @apply bg-accent-200 dark:bg-accent-900 text-black dark:text-white;
+        background-color: rgb(var(--fg-rgb) / 0.2);
+        color: var(--fg);
       }
       .MathJax svg {
         display: inline !important;
@@ -70,7 +88,7 @@ const { title, description, image } = Astro.props;
   </head>
 
   <body
-    class="bg-base-100 dark:bg-base-950 flex mx-1 sm:mx-4 transition-all duration-150"
+    class="bg-[var(--bg)] text-[var(--fg)] flex mx-1 sm:mx-4 transition-all duration-150"
   >
     <div class="max-w-4xl mx-auto my-1 sm:my-8 w-full">
       <div class="w-full">

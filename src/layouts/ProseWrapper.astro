@@ -1,16 +1,18 @@
 ---
-import { colorBaseClasses, colorAccentClasses } from "src/colors";
-import { ACCENT_COLOR, BASE_COLOR } from "../config.ts";
+import { colorBaseClasses, colorAccentClasses } from "../colors";
+import { ACCENT_COLOR, BASE_COLOR } from "../config";
 
 const { class: className } = Astro.props;
 ---
 
 <div
   class:list={[
-    "prose prose-img:rounded-xl dark:prose-invert prose-a:no-underline",
-    "prose-inline-code:bg-base-100 dark:prose-inline-code:bg-base-800 prose-inline-code:p-1 prose-inline-code:rounded-md",
-    colorBaseClasses[BASE_COLOR],
-    colorAccentClasses[ACCENT_COLOR],
+    "prose prose-img:rounded-xl prose-a:no-underline",
+    "prose-inline-code:bg-[var(--bg)] prose-inline-code:p-1 prose-inline-code:rounded-md",
+    "prose-headings:text-[var(--fg)] prose-p:text-[var(--fg)] prose-strong:text-[var(--fg)] prose-em:text-[var(--fg)]",
+    "prose-ul:text-[var(--fg)] prose-ol:text-[var(--fg)] prose-li:text-[var(--fg)]",
+    "prose-a:text-[var(--fg)] hover:prose-a:text-[var(--fg)]/80",
+    "prose-code:text-[var(--fg)] prose-pre:bg-[var(--bg)] prose-pre:border prose-pre:border-[var(--fg)]/20",
     className,
   ]}
 >

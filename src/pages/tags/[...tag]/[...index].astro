@@ -1,8 +1,8 @@
 ---
-import { POSTS_PER_PAGE } from "../../../config.ts";
+import { POSTS_PER_PAGE } from "../../../config";
 
-import { getBlogPosts } from "src/utils";
-import PostList from "$layouts/PostList.astro";
+import { getBlogPosts } from "../../../utils";
+import PostList from "../../../layouts/PostList.astro";
 
 export async function getStaticPaths() {
   const posts = await getBlogPosts();
@@ -56,7 +56,7 @@ const total = Math.ceil(
   <h1 class="inline-flex gap-4 flex-col sm:flex-row sm:items-center">
     Posts tagged with <div>
       <p
-        class="not-prose bold text-xl rounded-full inline-block bg-base-200 px-4 py-1.5 text-base-800 dark:bg-base-800 dark:text-base-300 border border-base-300 dark:border-base-700"
+        class="not-prose bold text-xl rounded-full inline-block bg-base-50 px-4 py-1.5 text-accent-950 border border-accent-900/20"
       >
         {tag}
       </p>

@@ -1,5 +1,6 @@
 ---
 import {
+  SITE,
   BASE,
   MANUAL_DARK_MODE,
   SEARCH_ENABLED,
@@ -7,7 +8,7 @@ import {
   SITE_NAME,
   SITE_TITLE,
   SHOW_FAVICON_IN_HEADER,
-} from "../config.ts";
+} from "../config";
 import ThemeToggle from "./ThemeToggle.astro";
 import HeaderLink from "./HeaderLink.astro";
 import CodeCopyButton from "./CodeCopyButton.astro";
@@ -24,13 +25,19 @@ const { active } = Astro.props;
     aria-label="Global"
   >
     <div class="flex lg:flex-1">
-      <a href={BASE + "/"} class="p-1.5">
+      <a href={SITE + BASE} class="p-1.5">
         <span class="sr-only">go to home</span>
 
         <div class="text-3xl flex items-center gap-x-2">
-          {SHOW_FAVICON_IN_HEADER ? SITE_FAVICON : null}
+          {SHOW_FAVICON_IN_HEADER ? (
+            SITE_FAVICON.startsWith('/') ? (
+              <img src={SITE_FAVICON} alt="Site icon" class="w-8 h-8" />
+            ) : (
+              <span>{SITE_FAVICON}</span>
+            )
+          ) : null}
           <span
-            class="hidden md:block font-bold text-base text-base-950 dark:text-base-50"
+            class="hidden md:block font-bold text-base text-[var(--fg)]"
             >{SITE_NAME || SITE_TITLE}</span
           >
         </div>
@@ -38,13 +45,13 @@ const { active } = Astro.props;
     </div>
     <div class="flex gap-x-10">
       <HeaderLink
-        href={BASE + "/"}
+        href={SITE + BASE}
         active={active === "blog"}
         class="text-sm font-semibold leading-6">Blog</HeaderLink
       >
       <HeaderLink
-        href={BASE + "/about"}
-        active={active === "about"}
+        href="https://samharrison.ca"
+        active={false}
         class="text-sm font-semibold leading-6">About</HeaderLink
       >
 

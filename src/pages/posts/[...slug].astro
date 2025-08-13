@@ -1,15 +1,15 @@
 ---
 import { type CollectionEntry, render } from "astro:content";
-import BaseLayout from "$layouts/BaseLayout.astro";
-import BlogPost from "$layouts/BlogPost.astro";
-import Header from "$components/Header.astro";
-import Footer from "$components/Footer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../layouts/BlogPost.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 import { Image } from "astro:assets";
-import FormattedDate from "$components/FormattedDate.astro";
-import { getBlogPosts } from "src/utils";
-import BlueskyLikes from "$components/bluesky/BlueskyLikes.astro";
-import Tag from "$components/Tag.astro";
-import { SHOW_IMAGES } from "../../config.ts";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { getBlogPosts } from "../../utils";
+import BlueskyLikes from "../../components/bluesky/BlueskyLikes.astro";
+import Tag from "../../components/Tag.astro";
+import { SHOW_IMAGES } from "../../config";
 
 export async function getStaticPaths() {
   const posts = await getBlogPosts(true);
@@ -42,7 +42,7 @@ if (replacedHero && !images[replacedHero])
         <Image
           src={images[replacedHero]()}
           alt=""
-          class="w-full h-80 object-cover rounded-xl shadow border border-base-400 dark:border-base-700"
+          class="w-full h-80 object-cover rounded-xl shadow border border-accent-900/20"
         />
       ) : null
     }
@@ -50,7 +50,7 @@ if (replacedHero && !images[replacedHero])
       <div
         class="flex mt-8 gap-4 text-xs flex-col md:flex-row items-start md:items-center"
       >
-        <div class="shrink-0">
+        <div class="shrink-0 ">
           <FormattedDate date={post.data.pubDate} />
         </div>
         <div class="flex gap-2 flex-wrap">
