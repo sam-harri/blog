@@ -11,7 +11,8 @@ export const SITE = import.meta.env.PUBLIC_SITE_URL || "http://localhost:4322";
 // NUMBER TWO:
 // if repo name is <your-github-username>.github.io set to '/'
 // otherwise set to '/<your-repo-name>'
-export const BASE = "/";
+// For GitHub Pages with custom domain, use '/' in production, '/blog' in development
+export const BASE = import.meta.env.PUBLIC_SITE_URL ? "/" : "/blog";
 
 // MORE SETTINGS:
 
