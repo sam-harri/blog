@@ -22,7 +22,7 @@ export const SITE_TITLE = "Sam Harrison — Blog";
 export const SITE_DESCRIPTION = "Welcome to my blog! I write about my experiences and opinions on software development, and other topics.";
 
 // will be used as the icon in the header and the favicon
-export const SITE_FAVICON = "/pagefind/favicon.svg";
+export const SITE_FAVICON = "/favicon.svg";
 
 // will be used in the footer as the name of the author (c) <YEAR> <NAME> - LICENSE
 export const NAME = "Sam Harrison";
