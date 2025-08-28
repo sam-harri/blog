@@ -36,6 +36,7 @@ export default {
             "blockquote p:first-of-type::after": {
               content: "none",
             },
+            
           },
         },
       },

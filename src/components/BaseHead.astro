@@ -55,3 +55,22 @@ const { title, description, image = "main.png" } = Astro.props;
   property="twitter:image"
   content={new URL(SITE + BASE + "open-graph/" + image, Astro.url)}
 />
+
+<!-- MathJax for math rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.css">
+<script>
+  // @ts-ignore
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      ignoreHtmlClass: '.*|',
+      processHtmlClass: 'arithmatex'
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>

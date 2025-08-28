@@ -14,7 +14,7 @@ You orginally had a binary state, and used a boolean to represent it. A third st
 1. Break the API by changing the `bool` to something else
 2. Add another `bool`, creating invalid state combinations
 
-If you wrote your Python a bit more like Rust I'd argue this issue would have been avoided from the start, and you'd also have more robust and self documenting code.
+If you wrote your Python with more fitting types I'd argue this issue would have been avoided from the start, and you'd also have more robust and self documenting code.
 
 Consider a function that needs a user's status. Initially, a user can only be `active` or `inactive`. A boolean seems perfect.
 
