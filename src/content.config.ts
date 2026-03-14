@@ -61,9 +61,12 @@ import { authorFeedLoader } from "@ascorbic/bluesky-loader";
 import { BLUESKY_IDENTIFIER } from "./config.ts";
 
 const posts = defineCollection({
-  loader: authorFeedLoader({
-    identifier: BLUESKY_IDENTIFIER,
-  }),
+  // Treat Bluesky comments/likes as optional when no identifier is configured.
+  loader: BLUESKY_IDENTIFIER
+    ? authorFeedLoader({
+        identifier: BLUESKY_IDENTIFIER,
+      })
+    : async () => [],
 });
 
 export const collections = { blog, posts };

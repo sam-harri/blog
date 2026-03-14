@@ -9,12 +9,13 @@ const posts = await getBlogPosts();
 
 const pages = posts.reduce(
   (acc, post) => {
+    const effectiveOGImage = post.data.customOGImage ?? post.data.heroImage;
     acc[post.id] = {
-      title: post.data.customOGImage ? "" : post.data.title,
-      description: post.data.customOGImage
+      title: effectiveOGImage ? "" : post.data.title,
+      description: effectiveOGImage
         ? ""
         : ((post.data.shortDescription ?? post.data.description ?? "") + "\n\n" + SITE_TITLE),
-      customOGImage: post.data.customOGImage?.replace("../..", "/src").replace('/src', './src'),
+      customOGImage: effectiveOGImage?.replace("../..", "/src").replace('/src', './src'),
     };
     return acc;
   },
