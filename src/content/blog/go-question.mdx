@@ -1,7 +1,7 @@
 ---
 title: "Adding a Rust-inspired try `?` operator to Golang"
 description: "Forking the Golang compiler for a zero-cost abstraction around if err != nil; return ..., err"
-pubDate: "Mar 14 2025"
+pubDate: "Mar 14 2026"
 published: true
 tags: ["golang"]
 heroImage: "../../assets/blog/go-question-hero.png"
@@ -40,7 +40,7 @@ This blog is a walkthrough on how I made this change in a fork of the Go compile
 
 ## Scanner/Lexer
 
-The first change was in the scanner/lexer, whose job is to turn raw characters from your `.go` file and a stream of tokens.
+The first change was in the scanner/lexer, whose job is to turn raw characters from your `.go` file into a stream of tokens.
 Here, all that was was needed was declaring the new token type in `tokens.go`:
 
 ```go
