@@ -440,7 +440,7 @@ We borrow it here nonetheless, with a little workaround
 
 In the previous step, we saw that for multi-value assignments we create an `InlinedCallExpr`, which breaks an assumption in the compiler's IR-level type checker.
 Multi-value assignments like a, b := f() are handled by the `assign` function in `stmt.go`, but this function makes the assumption that the right-hand side of a
-multi-value assignment is always an `CallExpr`, because in normal Go, the only way to produce multiple values is a function call. So, for this workaround, we are treating the new `?` as though it was an inlined function
+multi-value assignment is always an `CallExpr`, because in normal Go, the only way to produce multiple values is a function call (not exactly, but other ways are handled by different assignment ops in the compiler). So, for this workaround, we are treating the new `?` as though it was an inlined function
 
 ```go
 func assign(stmt ir.Node, lhs, rhs []ir.Node) {
